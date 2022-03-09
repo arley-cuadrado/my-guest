@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from '../../Images/Profile/profile-customer.png'
-import Icon from '../../Images/icon/myguest.png'
+import Icon from '../../Images/icon/myguest.svg'
 
 const Topbar = function() {
     return(
@@ -9,7 +9,7 @@ const Topbar = function() {
                 <div>
                     <img src={Icon} alt="myguest"></img>
                 </div>
-                <div>
+                <div className="profile-bg">
                     <img src={Profile} alt="profile"></img>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import {
 
 import Main from '../Main/Main'
 import Forms from '../Form/Forms'
+import Form from '../Form/Form'
 import Settings from '../Settings/Settings'
 
 import Navbar from "./Navbar"
@@ -24,6 +25,7 @@ class Menu extends React.Component {
                     <Routes>
                         <Route path="/" element={<Main />} />
                         <Route path="/formularios" element={<Forms />} />
+                        <Route path="/formulario" element={<Form />} />
                         <Route path="/respuestas" element={<Answers />}></Route>
                         <Route path="/configuracion" element={<Settings />} />
                     </Routes>

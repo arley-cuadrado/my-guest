@@ -4,7 +4,7 @@ class Settings extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="center-main">
                 Configuración component
             </div>
         )

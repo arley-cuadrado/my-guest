@@ -4,7 +4,7 @@ class Answers extends React.Component {
 
     render(){
         return(
-            <div>Respuestas</div>
+            <div className="center-main">Respuestas</div>
         )
     }
 

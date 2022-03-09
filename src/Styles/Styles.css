@@ -53,3 +53,93 @@ a{
 .align{
     align-items: center;
 }
+
+.profile-bg img{
+    background: linear-gradient(0deg, rgba(253,213,36,1) 0%, rgba(228,53,61,1) 35%);
+    border-radius: 60px;
+    padding: 3px;
+}
+
+.empty-form{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.empty-form img{
+    width: 250px;
+    margin-bottom: 25px;
+}
+
+.full-form{
+    text-align: start;
+}
+.full-form h2{
+    border-bottom: solid 1px #F1F3F4;
+    width: 270px;
+}
+
+main{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.center-main{
+    display: flex;
+    height: 50rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*FORM*/
+form{
+    width: 50%;
+}
+.form-input{
+    margin-bottom: 15px;
+}
+.form-style{
+    background-color: #F1F3F4;
+    padding: 30px 15px 30px 15px;
+    text-align: initial;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.form-style input, textarea, select{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    /*border-bottom: solid 1px #000;*/
+}
+input, select{
+    height: 40px;
+}
+select::after{
+    padding: 0px 15px !important;
+}
+input::after{
+    padding: 0px 15px !important;
+}
+.left-main{
+    align-items: initial;
+    justify-content: flex-start !important;
+}
+.input-title{
+    /*width: 97% !important;*/
+    height: 52px;
+    font-size: 33px;
+    /*padding: 0px 15px;*/
+}
+.input-info{
+    /*width: 97% !important;*/
+    height: 52px;
+    /*padding: 15px 15px;*/
+}
+.next-to{
+    display: flex;
+    justify-content: space-between;
+}
+.setenta{
+    width: 70%;
+}
