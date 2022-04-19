@@ -83,6 +83,7 @@ const Form = function() {
 
                 <div className="center-main left-main">
                     <main className="padding" > {/* key={nanoid()} */}
+                        {/*
                         <section className="title-form form-style">
                             <div className="form-input">
                                 <input id="" type="text" name="tituloformulario" placeholder="Titulo" className="input-title"></input>
@@ -90,7 +91,8 @@ const Form = function() {
                             <div className="form-input">
                                 <textarea id="" name="descripcion" rows="4" cols="50" placeholder="Descripción..." className="input-info"></textarea>
                             </div>
-                        </section>                        
+                        </section>  
+                        */}                      
                        
                         {/* ------------------------------------------ */}
                         <section className="flexbox title-form form-style">

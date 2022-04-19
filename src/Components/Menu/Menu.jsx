@@ -25,7 +25,7 @@ class Menu extends React.Component {
                     <Routes>
                         <Route path="/" element={<Main />} />
                         <Route path="/formularios" element={<Forms />} />
-                        <Route path="/formulario" element={<Form />} />
+                        <Route path="/formulario" element={<Forms />} />
                         <Route path="/respuestas" element={<Answers />}></Route>
                         <Route path="/configuracion" element={<Settings />} />
                     </Routes>

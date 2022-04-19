@@ -19,6 +19,9 @@ a{
 .flexbox{
     display: flex;
 }
+.flexbox-column{
+    flex-flow: column-reverse;
+}
 .block{
     display: block !important;
     width: 100%;
@@ -71,6 +74,10 @@ a{
     display: flex;
     flex-flow: column;
 }
+.lista-formularios{
+    border-bottom: 1px gray dashed;
+    padding-bottom: 16px;
+}
 
 .empty-form{
     display: flex;
@@ -87,6 +94,10 @@ a{
     height: 40px;
     display: flex;
     align-items: center;
+}
+
+.margen-none{
+    margin-bottom: 0px !important;
 }
 
 .full-form{
@@ -141,6 +152,9 @@ form{
     text-align: initial;
     border-radius: 8px;
     margin-bottom: 15px;
+}
+.form-style-title{
+    padding: 30px 15px 0px 15px !important;
 }
 .form-style input, textarea, select{
     width: 100%;
