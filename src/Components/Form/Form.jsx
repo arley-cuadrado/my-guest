@@ -1,5 +1,6 @@
 import React, {useState, useRef } from "react"
 import { nanoid } from 'nanoid'
+import Opciones  from './MicroForm/Opciones'
 
 const Form = function() {
  
@@ -98,13 +99,14 @@ const Form = function() {
                             <ul>
                                 {
                                     preguntas.length === 0 ? (
-                                        <li>No hay preguntas</li> 
+                                        <li className="empty">No hay preguntas</li> 
                                     ) : (
                                         preguntas.map( item => (
                                             <li key={item.id}>
+                                                
                                                 <article className="lista-preguntas">
-                                                <div className="pregunta-input cien"><span>{item.nombrePregunta}</span></div>
-                                                <div className="pregunta-button cuarenta">
+                                                <div className="pregunta-input-gray cien"><span>{item.nombrePregunta}</span></div>
+                                                <div className="pregunta-button pregunta-button-gray cuarenta">
                                                     <button
                                                         onClick={() => eliminarPregunta(item.id)}
                                                     >
@@ -118,18 +120,20 @@ const Form = function() {
                                                     </button>
                                                 </div>
                                                 </article>
-                                                
-                                                <hr />
-    
+                                            
                                                 <div className="form-input">
-                                                    <select name="answer" id="answer-select" defaultValue={'DEFAULT'} onChange={handlerFormOptions}>
+                                                    {/* <select name="answer" id="answer-select" defaultValue={'DEFAULT'} onChange={handlerFormOptions}>
                                                     <option value="DEFAULT" disabled>Tipo de respuesta</option>
                                                         {
                                                             selectOptions.map(( item, index ) =>(
                                                                 <option key={"select"+index} value={index}>{item.option}</option>
                                                             ))
                                                         }
-                                                    </select>
+                                                    </select> */}
+                                                </div>
+    
+                                                <div className="form-input">
+                                                    <Opciones />
                                                 </div>
     
                                             </li>        

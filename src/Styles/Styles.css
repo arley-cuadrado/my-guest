@@ -81,6 +81,13 @@ a{
     width: 250px;
     margin-bottom: 25px;
 }
+.empty{
+    font-size: 12px !important;
+    color: gray !important;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
 
 .full-form{
     text-align: start;
@@ -97,9 +104,14 @@ main{
 .center-main{
     display: flex;
     /*height: 50rem;*/
-    height: 30rem;
+    /*height: 30rem;*/
+    height: auto;
     justify-content: center;
     align-items: center;
+}
+
+.center-main-small{
+    height: auto !important;
 }
 
 
@@ -110,9 +122,17 @@ form{
 .form-input{
     margin-bottom: 15px;
 }
+.form-input-border input{
+    border: solid 1px gray !important;
+}
 .pregunta-input{
     background-color: white;
     display: flex;
+    align-items: center;
+}
+.pregunta-input-gray{
+    background-color: #000;
+    color: white;
     align-items: center;
 }
 .form-style{
@@ -187,6 +207,9 @@ select{
     width: auto;
     height: auto;
 }
+.radio{
+    width: auto !important;
+}
 
 /*--------------------- INPUT EXAMINAR */
 .custom-input-file {
@@ -250,6 +273,9 @@ h4{
     display: flex;
     justify-content: right;
 }
+.pregunta-button-gray{
+    background-color: #000;
+}
 .pregunta-button button{
     height: 25px;
     margin-right: 16px;
@@ -267,6 +293,7 @@ button{
 
 .lista-preguntas{
     display: flex;
+    align-items: center;
 }
 
 ul{
@@ -280,5 +307,5 @@ ul{
 .error-message{
     color: red;
     font-size: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }

@@ -1,84 +1,98 @@
-import React from "react"
+import React, {useState, useRef } from "react"
 import { nanoid } from 'nanoid'
 
+const Opciones = function() {
+ 
+    //-------------------------------
+    const [ respuesta, setPregunta ] = useState('')
+    const [ preguntas, setPreguntas ] = useState([])
+    const [ id, setId ] = useState('')
 
-const Opciones = (props) => {
-
-        //setTareas([...tareas, { id: nanoid(), NombreTarea: tarea }]);
-
-        const options = [
-
-            {id: nanoid(), pregunta: 'Lorem ipsum dolor sit amet?', _id: 1},
-            {id: nanoid(), pregunta: 'xcepteur sint occaecat cupidatat non proident?', _id: 2},
-            {id: nanoid(), pregunta: 'Sunt in culpa qui officia deserunt mollit anim id est laborum?', _id: 3},
-            {id: nanoid(), pregunta: 'Sunt in culpa qui officia deserunt?', _id: 4},
-        ]
-
+    const agregarRespuesta = e =>{
+        e.preventDefault()
         
-        const [ opcion, setOpcion ] = React.useState('')
-        const [ opciones, setOpciones ] = React.useState([])
-        //const [ contador, setContador ] = React.useState(1)
-
-        //const incrementCounter = () => setContador(contador + 1)
-
-        const incrementCounter = () =>{
-            setOpciones([
-                ...opciones,
-                { id: nanoid(), respuestaOpcion: opcion }
-            ])
-        }
-
-
-
-        const addRadio = e =>{
-            e.preventDefault()
-            //console.log(object)
-            if( !opcion.trim() ){
-                console.log('Elemento vacio')
-            }
-            console.log(opcion)
-
-            setOpciones([
-                ...opciones,
-                { id: nanoid(), respuestaOpcion: opcion }
-            ])
-
-            setOpcion('')
+        if( !respuesta.trim() ){
+            console.log('Elemento vacio')
+            return
         }
         
+        console.log(respuesta)
 
-        console.log(props)
+        setPreguntas([
+            ...preguntas, 
+            { id: nanoid(), nombreRespuesta: respuesta },
+        ])
+        setPregunta('')
+    
+    }
+
+    const eliminarPregunta = id =>{
+        const arrayFiltrado = preguntas.filter( item => item.id !== id )
+        setPreguntas(arrayFiltrado)
+        //console.log(id)
+    }
+
+    const handlerFormOptions = (e) =>{
+        const idSelect = e.target.value;
+        //return cardFormulario(idSelect)
+    }
 
         return(
-            <div>
-                <>
-                    {/* Varias opciones, ID:  {props.id} */}
-                    <form onSubmit={addRadio} className="radioB margin-bottom">
-                        
-                        {
-                            options.map( item =>(
-                                <>
-                                    <div key={item.id}>
-                                    <input
-                                        type='text'
-                                        name='option'
-                                        value={item.pregunta}
-                                        placeholder="Escribe la respuesta"
-                                        onKeyUp={ e => setOpcion(e.target.value) }
-                                    />
-                                    <label>Option # {item._id}</label>
-                                    </div>
-                                </>
-                            ))
-                        }
-                        <button type="submit" onClick={incrementCounter}>Agregar opción</button>
-                        
-                    </form>
+            <>
 
-                </>
-            </div>
+                <div className="center-main center-main-small left-main">
+                    <main className="padding" > {/* key={nanoid()} */}
+                       
+                        {/* ------------------------------------------ */}
+                        <section className="flexbox title-form ">
+                        <div className="sesenta m-right">
+                            <ul>
+                                {
+                                    preguntas.length === 0 ? (
+                                        <li className="empty">No hay opciones</li> 
+                                    ) : (
+                                        preguntas.map( item => (
+                                            <li key={item.id}>
+                                                <article className="lista-preguntas">
+                                                <input type="radio" id="" name="" value="" className="radio"></input>
+                                                <div className="pregunta-input cien"><span>{item.nombreRespuesta}</span></div>
+                                                <div className="pregunta-button cuarenta">
+                                                    <button
+                                                        onClick={() => eliminarPregunta(item.id)}
+                                                    >
+                                                        Eliminar
+                                                    </button>
+                                                </div>
+                                                </article>
+    
+                                            </li>        
+                                    ))
+                                        
+                                    )
+
+                                }
+                            </ul>
+                        </div>
+                        <div className="form-add cuarenta">
+                            
+                            <form onSubmit={ agregarRespuesta }>
+                            <div className="form-input form-input-border">
+                                <input 
+                                    type="text" 
+                                    placeholder="Ingresa respuesta"
+                                    onChange={ e => setPregunta(e.target.value) }
+                                    value={respuesta}
+                                />
+                            </div>
+                                
+                            </form>
+                        </div>
+                        </section>
+                    </main>
+
+                </div>
+            </>
         )
-
 
 }
 
