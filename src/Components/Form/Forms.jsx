@@ -85,7 +85,7 @@ const Forms = function() {
             <>
 
                 <div className="center-main left-main">
-                    <main className="padding" > {/* key={nanoid()} */}
+                    <main className="padding cien" > {/* key={nanoid()} */}
                     {/*
                     <section className="title-form form-style">
                             <div className="form-input">

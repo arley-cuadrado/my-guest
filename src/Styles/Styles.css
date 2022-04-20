@@ -1,12 +1,14 @@
 body{
     background-color: #F1F3F4;
+    overflow-x: hidden;
 }
 main{
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     background: #fff;
-    width: 100%;
+    /*width: 100%;*/
+    width: auto;
     margin-top: 0px !important;
     border-radius: 8px;
 }
@@ -19,8 +21,17 @@ a{
 .flexbox{
     display: flex;
 }
+.space-between{
+    font-size: 12px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
 .flexbox-column{
     flex-flow: column-reverse;
+}
+.flexbox-next{
+    display: flex;
+    flex-flow: inherit; 
 }
 .block{
     display: block !important;
@@ -95,21 +106,22 @@ a{
     display: flex;
     align-items: center;
 }
-
+/*
 .margen-none{
     margin-bottom: 0px !important;
+}
+*/
+
+.padding-none{
+    padding: 0px !important;
 }
 
 .full-form{
     text-align: start;
 }
 .full-form h2{
-    border-bottom: solid 1px #F1F3F4;
+    /*border-bottom: solid 1px #F1F3F4;*/
     width: 270px;
-}
-
-main{
-    
 }
 
 .center-main{
@@ -154,7 +166,7 @@ form{
     margin-bottom: 15px;
 }
 .form-style-title{
-    padding: 30px 15px 0px 15px !important;
+    padding: 30px 0px 0px 0px !important;
 }
 .form-style input, textarea, select{
     width: 100%;
@@ -206,6 +218,12 @@ select{
 .cien{
     width: 100%;
 }
+.ochenta{
+    width: 80%;
+}
+.veinte{
+    width: 20%;
+}
 
 .smallFont{
     color: gray;
@@ -242,6 +260,7 @@ select{
     padding: 10px;
     position: relative;
     text-align: center;
+    border-radius: 8px;
 }
 .custom-input-file .input-file {
     border: 10000px solid transparent;
@@ -258,13 +277,26 @@ select{
 .input-file-input{
     height: 200px;
     cursor: pointer;
+    background: #00000008;
 }
 
 /*--------------------- INPUT COLOR */
+.color-picker{
+    text-align: left;
+}
 .color-picker input{
     height: 40px;
+    /*width: 10%;*/
     width: 100%;    
     border: none;
+    margin-bottom: 8px;
+    padding: 0px !important;
+}
+.color-picker p{
+    font-size: 12px;
+}
+.width-picker{
+    width: 100%;
 }
 
 /*--------------------- LINE */
@@ -322,4 +354,17 @@ ul{
     color: red;
     font-size: 12px;
     margin-bottom: 12px;
+}
+
+/**/
+.white-background{
+    background-color: white;
+}
+.padding-b0{
+    padding: 30px 15px 0px 15px !important;
+}
+
+/**/
+.box-shadow{
+    box-shadow: 3px 3px 3px 0px #d4d4d4;
 }

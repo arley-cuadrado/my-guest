@@ -22,8 +22,8 @@ class Settings extends React.Component{
         return(
             <div className="center-main main-content">
                 <div className="center-main left-main block">
-                    <main className="padding">
-                        <section className="title-form form-style">
+                    <main className="padding flexbox-next">
+                        <section className="title-form form-style ochenta white-background padding-b0">
                             <div className="form-input">
                                 <div className="full-form">
                                     <h2>Personaliza tu formulario</h2>
@@ -45,17 +45,21 @@ class Settings extends React.Component{
 
                         </section>
 
-                        <div className="form-input">
-                                <div className="full-form">
-                                    <h2>Personaliza el color de fondo</h2>
+                        <div className="form-input box-shadow veinte form-style padding-b0">
+                            <div className="full-form">
+                                <h2>Personaliza el color de fondo</h2>
+                            </div>
+                            <article className="width-picker">
+                                <div className="color-picker">
+                                    <p>Elige tu color de fondo dando click en el siguiente recuadro</p>
                                 </div>
-                            </div>
-                            <div className="">
-                                <span id="salida">#000000</span>
-                            </div>
-                            <div className="color-picker">
-                                <input type='color' name='' id='color' onClick={selectColor}/>
-                            </div>
+                                <div className="color-picker">
+                                    <input type='color' name='' id='color' onClick={selectColor}/> 
+                                    <div className="flexbox space-between">Background: <span id="salida">#000000</span></div>
+                                </div>
+                            </article>
+                        </div>
+                        
                     </main>
 
                 </div>
