@@ -51,7 +51,9 @@ class Settings extends React.Component{
                             </div>
                             <article className="width-picker">
                                 <div className="color-picker">
-                                    <p>Elige tu color de fondo dando click en el siguiente recuadro</p>
+                                    <p>Elige tu backgorund dando click en el siguiente recuadro, 
+                                        el color seleccionado será el que adopte tu formulario.
+                                    </p>
                                 </div>
                                 <div className="color-picker">
                                     <input type='color' name='' id='color' onClick={selectColor}/> 

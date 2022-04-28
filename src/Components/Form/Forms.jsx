@@ -99,7 +99,7 @@ const Forms = function() {
                         {/* ------------------------------------------ */}
                         <section className="flexbox flexbox-column title-form form-style">
                         <div className="cien m-right">
-                            <h4>Lista de formularios</h4>
+                            <h2>Lista de formularios</h2>
                             <ul>
                                 {
                                     formularios.length === 0 ? (
@@ -127,11 +127,11 @@ const Forms = function() {
                             </ul>
                         </div>
                         <div className="form-add cien">
-                            <h4>
+                            <h2>
                                 {
                                     modoEdicion ? 'Editar formulario' : 'Agregar formulario'
                                 }
-                            </h4>
+                            </h2>
                             
                             <form onSubmit={ modoEdicion ? editarPregunta : agregarPregunta } className="lista-formularios">
                             <div className="form-input">
