@@ -1,12 +1,14 @@
 body{
     background-color: #F1F3F4;
+    overflow-x: hidden;
 }
 main{
-    background: #fff;
-    height: 50rem;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-start;
+    background: #fff;
+    /*width: 100%;*/
+    width: auto;
     margin-top: 0px !important;
     border-radius: 8px;
 }
@@ -18,6 +20,22 @@ a{
 }
 .flexbox{
     display: flex;
+}
+.space-between{
+    font-size: 12px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+.flexbox-column{
+    flex-flow: column-reverse;
+}
+.flexbox-next{
+    display: flex;
+    flex-flow: inherit; 
+}
+.block{
+    display: block !important;
+    width: 100%;
 }
 .start{
     justify-content: flex-start;
@@ -50,6 +68,337 @@ a{
 .margin{
     margin: 15px;
 }
+.margin-bottom{
+    margin-bottom: 15px;
+}
 .align{
     align-items: center;
 }
+
+.profile-bg img{
+    background: linear-gradient(0deg, rgba(253,213,36,1) 0%, rgba(228,53,61,1) 35%);
+    border-radius: 60px;
+    padding: 3px;
+}
+
+.form-add form{
+    display: flex;
+    flex-flow: column;
+}
+.lista-formularios{
+    width: 50%;
+    padding-bottom: 16px;
+    border-bottom: 1px gray dashed;
+}
+
+.empty-form{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.empty-form img{
+    width: 250px;
+    margin-bottom: 25px;
+}
+.empty{
+    font-size: 12px !important;
+    color: gray !important;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+/*
+.margen-none{
+    margin-bottom: 0px !important;
+}
+*/
+
+.padding-none{
+    padding: 0px !important;
+}
+
+.full-form{
+    text-align: start;
+}
+.full-form h2{
+    /*border-bottom: solid 1px #F1F3F4;*/
+    /*width: 270px;*/
+    width: auto;
+}
+
+.center-main{
+    display: flex;
+    /*height: 50rem;*/
+    /*height: 30rem;*/
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-main-small{
+    height: auto !important;
+}
+
+
+/*FORM*/
+form{
+    width: 100%;
+}
+.form-input{
+    margin-bottom: 15px;
+}
+.form-input-border input{
+    border: solid 1px gray !important;
+}
+.pregunta-input{
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.pregunta-input-gray{
+    background-color: #000;
+    color: white;
+    align-items: center;
+}
+.form-style{
+    background-color: #F1F3F4;
+    padding: 30px 15px 30px 15px;
+    text-align: initial;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.form-style-title{
+    padding: 30px 0px 0px 0px !important;
+}
+.form-style input, textarea, select{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    /*border-bottom: solid 1px #000;*/
+}
+input, select{
+    height: 40px;
+}
+select::after{
+    padding: 0px 15px !important;
+}
+input::after{
+    padding: 0px 15px !important;
+}
+select{
+    margin-bottom: 15px;
+}
+.left-main{
+    align-items: initial;
+    justify-content: flex-start !important;
+}
+.input-title{
+    /*width: 97% !important;*/
+    height: 52px;
+    font-size: 33px;
+    /*padding: 0px 15px;*/
+}
+.input-info{
+    /*width: 97% !important;*/
+    height: 52px;
+    /*padding: 15px 15px;*/
+}
+.next-to{
+    display: flex;
+    justify-content: space-between;
+}
+.setenta{
+    /*width: 70%;*/
+    width: 70%;
+}
+.sesenta{
+    width: 60%;
+}
+.cuarenta{
+    width: 40%;
+}
+.cien{
+    width: 100%;
+}
+.ochenta{
+    width: 80%;
+}
+.veinte{
+    width: 20%;
+}
+
+.smallFont{
+    color: gray;
+    font-size: 12px;
+}
+
+/*-----------------------------------*/
+.radioB{
+    display: flex;
+    flex-flow: column;
+}
+.radioB input{
+    width: auto;
+    height: auto;
+}
+.radio{
+    width: auto !important;
+}
+
+/*--------------------- INPUT EXAMINAR */
+.custom-input-file {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: #d0dce6;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 auto 0;
+    min-height: 15px;
+    height: 200px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    border-radius: 8px;
+}
+.custom-input-file .input-file {
+    border: 10000px solid transparent;
+    cursor: pointer;
+    font-size: 10000px;
+    margin: 0;
+    opacity: 0;
+    outline: 0 none;
+    padding: 0;
+    position: absolute;
+    right: -1000px;
+    top: -1000px;
+}
+.input-file-input{
+    height: 200px;
+    cursor: pointer;
+    background: #00000008;
+}
+
+/*--------------------- INPUT COLOR */
+.color-picker{
+    text-align: left;
+}
+.color-picker input{
+    height: 40px;
+    /*width: 10%;*/
+    width: 100%;    
+    border: none;
+    margin-bottom: 8px;
+    padding: 0px !important;
+}
+.color-picker p{
+    font-size: 12px;
+}
+.width-picker{
+    width: 100%;
+}
+#salida{
+    font-weight: bold;
+}
+
+/*--------------------- LINE */
+.line{
+    background-color: gray;
+    height: 1px;
+    border: none;
+}
+
+/*--------------------- HS'S */
+
+h4{
+    border-bottom: 1px gray dashed;
+    padding-bottom: 16px;
+}
+
+/*--------------------- BUTTON */
+
+.pregunta-button{
+    display: flex;
+    justify-content: right;
+}
+.pregunta-button-gray{
+    background-color: #000;
+}
+.pregunta-button button{
+    height: 25px;
+    margin-right: 16px;
+}
+
+button{
+    height: 40px;
+}
+
+/*--------------------- MARGIN'S */
+
+.m-right{
+    margin-right: 50px;
+}
+
+.lista-preguntas{
+    display: flex;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+    margin-left: -40px;
+}
+
+
+/**/
+
+.error-message{
+    color: red;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+/**/
+.white-background{
+    background-color: white;
+}
+.padding-b0{
+    padding: 30px 15px 0px 15px !important;
+}
+
+/**/
+.box-shadow{
+    box-shadow: 3px 3px 3px 0px #d4d4d4;
+}
+
+/*TABLE*/
+th{
+    width: 8rem;
+    text-align: left;
+    font-weight: initial;
+}
+table{
+    border-bottom: 1px gray dashed;
+    padding-bottom: 16px;
+}
+.active{
+    font-weight: bold;
+}
+.active-bg{
+    color: #fff;
+    background: #6BCB77;
+}
+
+/*Icons*/
+.title-answers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons img{
+    width: 40px;
+}
+

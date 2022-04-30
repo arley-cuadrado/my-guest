@@ -1,14 +1,46 @@
-import React from "react";
+import React, {useState} from "react";
+import { Link } from "react-router-dom";
 
-class Main extends React.Component{
+import Emptyform from '../../Images/emptyform.svg'
 
-    render(){
-        return(
-            <div>
-                PLUS component
-            </div>
+const Main = function() {
+
+    var formulariosSize = 0;
+
+    const [ textmain, settextmain ] = useState(formulariosSize)
+
+    const createForm =()=>{
+        settextmain(
+
+            /** TODO ...... */
+
         )
     }
+
+    return(
+        <div className="padding title">
+            {
+                textmain <= 0 ? 
+                (
+                    <>
+                        <div className="empty-form center-main">
+                            <img src={Emptyform}></img>
+                            <div><span>No hay formularios creados, </span><Link to='/formulario'>crea el primero aquí.</Link> {/* onClick={()=> createForm()} */}</div>
+                        </div>
+                    </>
+                ) 
+                :
+                (
+                    <>
+                        <div className="full-form">
+                            <h2>Tus formularios</h2>
+                        </div>
+                    </>
+                ) 
+            }
+        </div>
+    )
+
 
 }
 
